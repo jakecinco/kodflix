@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getShows from './shows-get.js';
+import getShows from '../shows-get.js';
 
 export default class Details extends Component {
 
@@ -23,13 +23,19 @@ export default class Details extends Component {
       return <Redirect to='/not-found' />
     } else {
       return (
-        <div>
+        <div className='Details'>
           <h1>{this.state.movieTVshow.title}</h1>
+          <div className='container'>
+            <div className='text'>{this.state.movieTVshow.details}</div>
+            <img className='image'
+              src={this.state.movieTVshow.coverphoto}
+              alt={this.state.movieTVshow.title} />
+          </div>
           <Link to='/'>Back to home page</Link>
         </div>
       );
     }
-    
+
   }
 }
 
