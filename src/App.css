@@ -1,5 +1,8 @@
-.App {
+body {
   text-align: center;
+  background-color: #2f333d;
+  color: white;
+  min-height: 100%;
 }
 
 img {
@@ -8,37 +11,38 @@ img {
 }
 
 .container {
-  /* display: flex;
+  /* display: flex; 
   flex-wrap: wrap; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .item {
   /* flex: 1;
   flex-basis: 120px; */
-  border: 1px solid black;
   position: relative;
+  margin: 0;
+  border: 1px solid black;
   overflow: hidden;
 }
 
 .overlay {
   transition: bottom ease 1s;
-  background-color: green;
-  opacity: .6;
-  position: absolute;
+  left: 0;
   width: 100%;
   bottom: -100px;
-  left: 0;
+  position: absolute;
+  background-color: black;
+  color: white;
 }
 
 .item:hover .overlay {
-  display: block;
+  opacity: 0.7;
   bottom: 0;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;
   }
-}
+} */ 
