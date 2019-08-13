@@ -1,9 +1,9 @@
-import shaunOfTheDead from './gallery/showcover/images/shaun-of-the-dead.jpg';
-import dawnOfTheDead from './gallery/showcover/images/dawn-of-the-dead.jpg';
-import worldWarZ from './gallery/showcover/images/worldwarz.jpg';
-import theGirlWithAllTheGifts from './gallery/showcover/images/thegirlwithallthegifts.jpg';
-import trainToBusan from './gallery/showcover/images/train-to-busan.jpg';
-import twentyEightDaysLater from './gallery/showcover/images/28dayslater.jpg';
+import shaunOfTheDead from './gallery/show-cover/images/shaun-of-the-dead.jpg';
+import dawnOfTheDead from './gallery/show-cover/images/dawn-of-the-dead.jpg';
+import worldWarZ from './gallery/show-cover/images/worldwarz.jpg';
+import theGirlWithAllTheGifts from './gallery/show-cover/images/thegirlwithallthegifts.jpg';
+import trainToBusan from './gallery/show-cover/images/train-to-busan.jpg';
+import twentyEightDaysLater from './gallery/show-cover/images/28dayslater.jpg';
 
 export default function getGallery() {
     return [{
