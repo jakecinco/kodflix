@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowCover from './showcover/ShowCover';
+import ShowCover from './show-cover/ShowCover';
 import getShows from '../getShows';
 import './Gallery.css';
 
