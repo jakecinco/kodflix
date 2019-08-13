@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import React, { Component } from './node_modules/react';
+import { Link, Redirect } from './node_modules/react-router-dom';
 import getGallery from '../getShows';
 import './Details.css';
 
