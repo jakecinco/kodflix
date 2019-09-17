@@ -3,7 +3,16 @@ import ShowCover from './show-cover/ShowCover';
 import getShows from '../getShows';
 import './Gallery.css';
 
-export default function Gallery() {
+export default class Gallery extends React.Component {
+    componentDidMount() {
+        fetch('/rest/shows')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson);
+            });
+    }
     return (
         <div className='gallery'>
             {
