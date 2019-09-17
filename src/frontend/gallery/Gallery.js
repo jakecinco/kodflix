@@ -13,17 +13,19 @@ export default class Gallery extends React.Component {
                 console.log(myJson);
             });
     }
-    return (
-        <div className='gallery'>
-            {
-                getShows().map(show => (
-                    <ShowCover
-                        key={show.id} //Each child in a list should have a unique "key" prop.
-                        id={show.id}
-                        title={show.title}
-                        coverphoto={show.coverphoto} />
-                ))
-            }
-        </div>
-    );
+    render() {
+        return (
+            <div className='gallery'>
+                {
+                    getShows().map(show => (
+                        <ShowCover
+                            key={show.id} //Each child in a list should have a unique "key" prop.
+                            id={show.id}
+                            title={show.title}
+                            coverphoto={show.coverphoto} />
+                    ))
+                }
+            </div>
+        );
+    }
 }
