@@ -1,6 +1,3 @@
-
-
-
 module.exports = function getShows() {
     return [{
         id: 'shaun-of-the-dead',
