@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ShowCover from './show-cover/ShowCover';
+import Loading from '../common/loading/Loading';
 import './Gallery.css';
 
 export default class Gallery extends Component {
@@ -8,9 +9,7 @@ export default class Gallery extends Component {
         this.state = {
             shows: []
         };
-
     }
-
     componentDidMount() {
         fetch('/rest/shows')
             .then(response => response.json())
@@ -20,13 +19,15 @@ export default class Gallery extends Component {
         return (
             <div className='gallery'>
                 {
-                    this.state.shows.map(show => (
-                        <ShowCover
-                            key={show.id} //Each child in a list should have a unique "key" prop.
-                            id={show.id}
-                            title={show.title}
-                            coverphoto={show.coverphoto} />
-                    ))
+                    this.state.shows.length ?
+                        this.state.shows.map(show => (
+                            <ShowCover
+                                key={show.id} //Each child in a list should have a unique "key" prop.
+                                id={show.id}
+                                title={show.title}
+                                coverphoto={show.coverphoto} />
+                        )) :
+                        <Loading />
                 }
             </div>
         );

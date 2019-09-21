@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import Loading from '../common/loading/Loading';
 import './Details.css';
 
 export default class Details extends Component {
@@ -26,7 +27,7 @@ export default class Details extends Component {
         if (show) {
             return show.id ?
                 <DetailsContent show={show} /> :
-                <div />
+                <Loading />
         } else {
             return <Redirect to='/not-found' />;
         }
