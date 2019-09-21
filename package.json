@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^3.3.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
@@ -14,7 +15,8 @@
     "start": "npm-run-all -s build start-backend",
     "start-frontend": "react-scripts start",
     "start-backend": "nodemon src/backend/app.js",
-    "start-dev": "npm-run-all -p start-frontend start-backend",
+    "start-dev": "npm-run-all -p start-db start-frontend start-backend",
+    "start-db": "mongod",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
